@@ -12,7 +12,7 @@ export const HomeView = () => {
           A reliable <span className="text-customOrange">logistic</span> service
           for <span className="text-customOrange">all scales</span> of business.{" "}
         </div>
-        <div className="flex justify-between items-end flex-col md:flex-row gap-8 lg:gap-0">
+        <div className="flex justify-between md:items-end items-center flex-col md:flex-row gap-8 lg:gap-0">
           <Stats />
           <div className="flex gap-2 lg:gap-4 flex-col md:flex-row">
             <ServiceBtn
