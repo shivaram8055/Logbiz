@@ -13,14 +13,14 @@ const Navbar = () => {
       title: "Dashboard",
     },
     {
-      id: "serviceListing",
+      id: "services-listing",
       title: "Service Listing",
     },
   ];
 
   const mobileNavLinks = [
     {
-      id: "#",
+      id: "/",
       title: "Home",
     },
     {
@@ -32,7 +32,7 @@ const Navbar = () => {
       title: "Dashboard",
     },
     {
-      id: "serviceListing",
+      id: "services-listing",
       title: "Service Listing",
     },
     {
@@ -40,7 +40,7 @@ const Navbar = () => {
       title: "Contact Us",
     },
     {
-      id: "signup",
+      id: "login",
       title: "SignUp/Login",
     },
   ];
@@ -72,7 +72,7 @@ const Navbar = () => {
                 } hover:bg-[#ff6600] hover:text-white hover:rounded-md cursor-pointer whitespace-nowrap flex-shrink-0`}
                 onClick={() => setActive(nav.title)}
               >
-                <Link to={nav.id}>{nav.title}</Link>
+                <Link to={`/${nav.id}`}>{nav.title}</Link>
               </li>
             ))}
           </ul>
@@ -90,13 +90,13 @@ const Navbar = () => {
         </div>
         <div className="flex-1 flex justify-end gap-2 items-center text-sm">
           <Link
-            to="contactUs"
+            to="/contact"
             className="rounded-sm p-2 bg-white text-black hover:bg-[#ff6600] hover:text-white whitespace-nowrap flex-shrink-0"
           >
             Contact Us
           </Link>
           <Link
-            to="userAuthentication"
+            to="/login"
             className="rounded-sm p-2 bg-white text-black hover:bg-[#ff6600] hover:text-white whitespace-nowrap flex-shrink-0"
           >
             Sign Up / Login
@@ -110,7 +110,6 @@ const Navbar = () => {
           to="/"
           onClick={() => {
             setActive("");
-            window.scrollTo(0, 0);
           }}
         >
           <img src={LogbizLogo} alt="Logbiz" className="h-8" />
@@ -174,7 +173,7 @@ const Navbar = () => {
                 className="text-white hover:bg-[#ff6600] hover:text-white hover:rounded-md w-full p-2"
               >
                 <Link
-                  to={nav.id}
+                  to={`/${nav.id}`}
                   onClick={() => setMenuOpen(false)}
                   className={`${
                     active === nav.title ? "text-[#ff6600]" : "text-white"
