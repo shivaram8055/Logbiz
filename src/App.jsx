@@ -1,5 +1,5 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import { Navbar } from "./components/Navbar/Navbar";
+import Navbar from "./components/Navbar";
 import { HomeView } from "./views/HomeView";
 import { ServicesView } from "./views/ServicesView";
 import { DashboardView } from "./views/DashboardView";
@@ -12,7 +12,7 @@ function App() {
     <div className="flex flex-col items-center mt-4">
       <Navbar />
 
-      <div className="mt-24">
+      <div className="mt-6">
         <Routes>
           <Route path="*" element={<Navigate to="/" />} />
           <Route path="/" element={<HomeView />} />
